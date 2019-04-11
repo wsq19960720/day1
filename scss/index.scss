@@ -1,0 +1,65 @@
+@import "_mixin.scss";
+@import "common.scss";
+html,
+body {
+    @extend %full;
+}
+
+.wrapper {
+    @extend %full;
+    display: flex;
+    flex-direction: column;
+    background: #ccc;
+    .header {
+        width: 100%;
+        height: rem(40px);
+        background: #fff;
+        justify-items: center;
+        padding: rem(15px);
+        align-items: center;
+        text-align: center;
+        line-height: rem(40px);
+        display: flex;
+        .left {
+            width: rem(30px);
+            height: rem(40px);
+            font-size: rem(15px);
+            text-align: center;
+        }
+        .center {
+            flex: 1;
+            text-align: center;
+        }
+    }
+    .main {
+        width: 100%;
+        flex: 1;
+        .deng {
+            width: 100%;
+            height: rem(50px);
+            text-align: center;
+            line-height: rem(50px);
+            background: #fff;
+        }
+        .list {
+            width: 100%;
+            background: #fff;
+            ul {
+                width: 100%;
+                li {
+                    width: 100%;
+                    border-bottom: 1px solid #ccc;
+                    height: rem(50px);
+                    line-height: rem(50px);
+                    padding: 0 rem(30px);
+                }
+            }
+        }
+    }
+    .footer {
+        width: 100%;
+        height: rem(40px);
+        background: #000;
+        color: #fff;
+    }
+}
